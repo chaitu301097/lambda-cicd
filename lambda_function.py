@@ -13,11 +13,11 @@ def lambda_handler(event, context):
     
     # Encrypt the data
     encrypted_data = encrypt_data(key_id, plaintext)
-    print(f'Encrypted data with kms: {encrypted_data}')
+    print(f'Encrypted data: {encrypted_data}')
     
     # Decrypt the data
     decrypted_data = decrypt_data(encrypted_data)
-    print(f'Decrypted data with kms: {decrypted_data}')
+    print(f'Decrypted data: {decrypted_data}')
     
     return {
         'statusCode': 200,
